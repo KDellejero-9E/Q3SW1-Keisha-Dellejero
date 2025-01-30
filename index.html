@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Currency Converter</title>
+
+	<!-- JS Setup -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+	<link rel="stylesheet" ref="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+	<!-- External CSS -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="container">
+        <h2>Currency Converter</h2>
+        <p>Convert 100 Pesos to USD and EUR</p>
+        
+        <p id="usd-result"></p>
+        <p id="eur-result"></p>
+        
+        <button onclick="convertCurrency()">Convert</button>
+        <button onclick="refreshPage()">Refresh</button>
+        <p>Keisha Dellejero | 9E</p>
+    </div>
+
+    <script>
+        function convertCurrency() {
+            let peso = 100;
+            let usdRate = 0.018;
+            let eurRate = 0.016;
+            
+            let usdValue = peso * usdRate;
+            let eurValue = peso * eurRate;
+            
+            document.getElementById("usd-result").innerHTML = "100 Pesos = " + usdValue.toFixed(2) + " USD";
+            document.getElementById("eur-result").innerHTML = "100 Pesos = " + eurValue.toFixed(2) + " EUR";
+        }
+
+        function refreshPage() {
+            location.reload();
+        }
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>
